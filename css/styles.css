@@ -1,0 +1,225 @@
+/* 1. SELECTOR PADRE O PRINCIPAL */
+:root{
+    --color-primario: #EC111A;
+    --color-secundario: #082BA5;
+    --color-parrafos: #53575A;
+    --color-titulos: #282D31;
+    --color-fondo: #FCFCFC;
+    --color-sombras: #282D31;
+
+}
+/* 3. SELECTOR UNIVERSAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* SELECTOR HIJO */
+body{
+    background-color: var(--color-fondo);
+}
+
+/* @import url(../fonts/fuente.ttf); */
+
+/* Botón de WhatsApp */
+.boton-whatsapp{
+    position: fixed;
+    bottom: 1em;
+    left: 1em;
+    background-color: #4dc247;
+    padding: .3em;
+    border-radius: 100%;
+    color: #fff;
+    font-size: 2.2em;
+}
+.boton-whatsapp:hover{
+    background-color: #128C7E;
+    transition: background-color .5s ease-in-out;
+}
+
+
+/* INICIO DE MENÚ */
+header{
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 0 3px var(--color-sombras);
+}
+
+.menu{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+}
+.img-logo{
+    height: 3.8em;
+    padding: .2em;
+
+}
+.icono-menu{
+    display: none;
+}
+
+.enlaces{
+    text-align: right;
+}
+
+.enlaces a{
+    color: var(--color-titulos);
+    padding: .5em;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+.headroom {
+    will-change: transform;
+    transition: transform 200ms linear;
+}
+.headroom--pinned {
+    transform: translateY(0%);
+}
+.headroom--unpinned {
+    transform: translateY(-100%);
+}
+
+/* El media scrren se utiliza para
+hacer RESPONSIVE WEB DESIGN (ADAPTABLE) */
+@media screen and (max-width: 1023px) {
+    .menu{
+        flex-direction: column;
+    }
+
+    .icono-menu{
+        display: block;
+        color: var(--color-primario);
+        font-size: 2em;
+        margin-top: .4em;
+    }
+
+    .logo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding: .5em;
+    }
+
+    .enlaces{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+
+}
+/* FIN DE MENÚ */
+
+/* 2. SELECTOR DE CLASE (CLASS): EL PUNTO ( . ) */
+
+.titulo2{
+    color: var(--color-titulos);
+    font-size: 1.4em;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+}
+
+.titulo1{
+    color: var(--color-primario);
+    font-size: 1.7em;
+    font-weight: bold;
+    margin-top: -.3em;
+}
+
+.parrafo{
+    color: var(--color-parrafos);
+    text-align: justify;
+    font-size: 1em;
+    line-height: 1.5em;
+    font-family: "Roboto", sans-serif;
+}
+.margen{
+    margin-bottom: 2em;
+}
+.enlace{
+    background-color: var(--color-primario);
+    color: #fff;
+    padding: 1em;
+    border-radius: .6em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* PSEUDO CLASE */
+.enlace:hover{
+    color: yellow;
+    background-color: var(--color-secundario);
+    transition: background-color .5s ease-in-out;
+}
+
+
+/* INICIO DE CARDS */
+.cards-grid{
+    display: grid;
+    gap: 1.5em;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.card{
+    background-color: #fff;
+    border-radius: .5em;
+    border: 1px solid var(--color-parrafos);
+    box-shadow: 0px 0px 3px var(--color-sombras);
+}
+
+.card-img img{
+    border-radius: .5em .5em 0 0;
+    /* border-top-left-radius: .5em;
+    border-top-right-radius: .5em; */
+}
+
+.card-content{
+    padding: 1em;
+}
+
+.card-content a{
+    text-decoration: none;
+}
+
+.card-title{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.5em;
+    text-align: center;
+    color: var(--color-titulos);
+    margin-bottom: 1.2em;
+}
+
+.card-info{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: var(--color-primario);
+    padding: .4em .7em;
+    text-decoration: none;
+    font-size: 1.2em;
+    display: block;
+    text-align: center;
+    border: 1px solid var(--color-primario);
+    border-radius: .3em;
+}
+
+
+.card-info:hover {
+  background-color: var(--color-primario);
+  color: #fff;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* FIN DE CARDS */

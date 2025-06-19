@@ -1,0 +1,46 @@
+/* 1. SELECTOR PADRE O PRINCIPAL */
+:root{
+    --color-primario: #EC111A;
+    --color-secundario: #082BA5;
+    --color-parrafos: #53575A;
+    --color-titulos: #282D31;
+    --color-fondo: #FCFCFC;
+
+}
+/* 3. SELECTOR UNIVERSAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* SELECTOR HIJO */
+body{
+    background-color: var(--color-fondo);
+}
+
+/* SELECTOR DE ETIQUETA */
+form{
+    background-color: #fff;
+    padding: 1em;
+    box-shadow: 1px 1px 8px #000;
+    max-width: 800px;
+    margin: auto;
+}
+label{
+    color: var(--color-primario);
+    font-weight: bold;
+}
+input{
+    width: 100%;
+    padding: .4em;
+    border: 1px solid var(--color-primario);
+    margin-bottom: 1em;
+}
+
+textarea{
+    width: 100%;
+    min-height: 150px;
+    max-height: 150px;
+      border: 1px solid var(--color-primario);
+}
